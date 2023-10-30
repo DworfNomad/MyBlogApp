@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Блог</title>
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+  }
+  
+  h1 {
+    text-align: center;
+    background-color: #008080;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #ccc;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #008080;
+  }
+</style>
+<body>
+  <h1>Мой блог</h1>
+  <ul>
+    <% blogPosts.forEach((post) => { %>
+      <li>
+        <h2><%= post.title %></h2>
+        <p><%= post.content.slice(0, 100) %></p>
+        <a href="/post/<%= blogPosts.indexOf(post) %>">Читать дальше</a>
+      </li>
+    <% }); %>
+  </ul>
+  <a href="/add">Добавить сообщение</a>
+</body>
+</html>

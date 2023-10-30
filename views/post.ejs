@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= blogPosts[postIndex].title %></title>
+</head>
+<style>
+  h2 {
+    background-color: #008080;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  p {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #ccc;
+  }
+</style>
+<body>
+  <h1><%= blogPosts[postIndex].title %></h1>
+  <p><%= blogPosts[postIndex].content %></p>
+  <a href="/">Вернуться к блогу</a>
+</body>
+</html>
